@@ -1,0 +1,11 @@
+services:
+  postgresql:
+    container_name: postgres_c
+    image: postgres
+    environment:
+      POSTGRES_USER: alex
+      POSTGRES_PASSWORD: alex
+      PGDATA: /data/postgres
+    ports:
+      - "5434:5432"
+    restart: unless-stopped
